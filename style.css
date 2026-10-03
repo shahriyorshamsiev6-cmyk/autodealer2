@@ -1,0 +1,1942 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(10px, 1.5vw, 22px);
+    width: 100%;
+    max-width: 1440px;
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 12px clamp(16px, 3vw, 42px);
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.header__menu img {
+    display: block;
+    flex: 0 0 auto;
+    width: clamp(150px, 18vw, 220px);
+    height: auto;
+    animation: menu-enter 500ms ease-out both;
+}
+
+.header__menu p {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 8px 0;
+    color: #252525;
+    font-size: clamp(13px, 1.1vw, 16px);
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: default;
+    animation: menu-enter 500ms ease-out both;
+    transition: color 180ms ease, transform 180ms ease;
+}
+
+.header__menu p::after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    height: 2px;
+    background-color: #e53935;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.header__menu p:hover {
+    color: #c62828;
+    transform: translateY(-2px);
+}
+
+.header__menu p:hover::after {
+    transform: scaleX(1);
+}
+
+.header__menu p:nth-of-type(1) { animation-delay: 70ms; }
+.header__menu p:nth-of-type(2) { animation-delay: 120ms; }
+.header__menu p:nth-of-type(3) { animation-delay: 170ms; }
+.header__menu p:nth-of-type(4) { animation-delay: 220ms; }
+.header__menu p:nth-of-type(5) { animation-delay: 270ms; }
+.header__menu p:nth-of-type(6) { animation-delay: 320ms; }
+.header__menu p:nth-of-type(7) { animation-delay: 370ms; }
+
+@keyframes menu-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header__img {
+    min-height: 500px;
+    overflow: hidden;
+    background-image: url("./IMG/street-landmark-center-urban-modern 1.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.header__backgroundimg {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+.header__backgroundimg img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.header__backgroundimg img:first-child {
+    position: absolute;
+    z-index: 1;
+    left: 31%;
+    width: min(60%, 660px);
+    height: 500px;
+}
+
+.header__backgroundimg img:nth-of-type(2) {
+    left: 55%;
+    z-index: 2;
+    width: min(30%, 450px);
+    height: 350px;
+}
+
+.header__text {
+    position: absolute;
+    top: 48px;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: min(35%, 440px);
+    color: #fff;
+    text-shadow: 0 2px 8px rgb(0 0 0 / 55%);
+}
+
+.header__text h2 {
+    font-size: clamp(28px, 3.5vw, 48px);
+    line-height: 1.1;
+}
+
+.header__text h4 {
+    font-size: clamp(16px, 1.7vw, 22px);
+    line-height: 1.3;
+}
+
+.header__text h4 span {
+    color: #ff3b30;
+}
+
+.header__button {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 240px;
+    margin: 0;
+    padding: 32px clamp(22px, 5vw, 64px);
+    overflow: hidden;
+    background: #202326;
+    color: #fff;
+}
+
+.header__button::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(90deg, rgb(13 16 18 / 88%) 0%, rgb(13 16 18 / 58%) 55%, rgb(13 16 18 / 20%) 100%);
+    content: "";
+}
+
+.header__button > img {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header__button-content {
+    width: min(100%, 620px);
+}
+
+.header__button h3 {
+    position: relative;
+    top: -20px;
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.15;
+}
+
+.header__button-links {
+    position: absolute;
+    top: 16px;
+    right: clamp(22px, 5vw, 64px);
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    max-width: 46%;
+    gap: 12px;
+}
+
+.header__button-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid rgb(255 255 255 / 72%);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.header__button-links a:hover,
+.header__button-links a:focus-visible {
+    transform: translateY(-2px);
+    border-color: #e53935;
+    outline: none;
+    background-color: #e53935;
+    color: #fff;
+}
+
+.header__button-links a.is-active {
+    background-color: #fff;
+    color: #f59e0b;
+    border-color: #fff;
+}
+
+.header__button-links a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.form-status {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    display: none;
+}
+
+.form-status.is-success {
+    display: block;
+    background: rgba(34, 197, 94, 0.12);
+    color: #166534;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.form-status.is-error {
+    display: block;
+    background: rgba(239, 68, 68, 0.1);
+    color: #b91c1c;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.brands-grid.is-expanded {
+    max-height: none;
+}
+
+.header__filters {
+    position: absolute;
+    right: clamp(22px, 5vw, 64px);
+    top: 96px;
+    left: clamp(22px, 5vw, 64px);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+    gap: 10px;
+
+}
+
+.header__filters select,
+.header__filters input {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid rgb(255 255 255 / 72%);
+    border-radius: 6px;
+    background-color: rgb(255 255 255 / 96%);
+    color: #252525;
+    font: inherit;
+    font-size: 14px;
+}
+
+.header__filters select:focus-visible,
+.header__filters input:focus-visible,
+.header__filters button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.header__filters button {
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid #e53935;
+    border-radius: 6px;
+    background-color: #e53935;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.header__filters button:hover {
+    transform: translateY(-2px);
+    background-color: #c62828;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 1100px) {
+    .header__button {
+        height: auto;
+        min-height: 300px;
+        padding-bottom: 150px;
+    }
+
+    .header__button-content {
+        width: 100%;
+    }
+
+    .header__button-links {
+        position: static;
+        margin-bottom: 16px;
+        max-width: 100%;
+    }
+
+    .header__filters {
+        position: static;
+        margin-top: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header__menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px 16px;
+        padding: 12px 16px 16px;
+    }
+
+    .header__menu img {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(190px, 65vw);
+        margin-bottom: 4px;
+    }
+
+    .header__menu p {
+        justify-self: center;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .header__img {
+        min-height: 420px;
+    }
+
+    .header__backgroundimg {
+        min-height: 420px;
+    }
+
+    .header__backgroundimg img:first-child {
+        left: 38%;
+        width: 56%;
+        height: 270px;
+    }
+
+    .header__backgroundimg img:nth-of-type(2) {
+        left: 58%;
+        width: 36%;
+        height: 225px;
+    }
+
+    .header__text {
+        top: 28px;
+        left: 5%;
+        gap: 10px;
+        width: 40%;
+    }
+
+    .header__text h2 {
+        font-size: 24px;
+    }
+
+    .header__text h4 {
+        font-size: 14px;
+    }
+
+    .header__button {
+        height: auto;
+        align-items: flex-start;
+        padding: 24px 18px 26px;
+    }
+
+    .header__button h3 {
+        top: 0;
+        max-width: 52%;
+        margin-bottom: 18px;
+        font-size: 24px;
+    }
+
+    .header__button-links {
+        gap: 8px;
+    }
+
+    .header__button-links a {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .header__filters {
+        right: 18px;
+        left: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .header__filters select,
+    .header__filters input,
+    .header__filters button {
+        height: 40px;
+        min-height: 40px;
+        font-size: 13px;
+    }
+
+    .header__filters button {
+        grid-column: 1 / -1;
+    }
+
+    .brands-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .brands-grid img {
+        min-height: 88px;
+    }
+
+    .quick-request-content {
+        display: block;
+    }
+
+    .request-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .offers-grid,
+    .advantages-grid,
+    .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .credit-terms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .main-container {
+        width: min(92%, 100%);
+    }
+
+    .header__text {
+        width: 48%;
+    }
+
+    .header__button {
+        padding: 20px 14px 22px;
+    }
+
+    .header__button h3 {
+        max-width: 100%;
+        font-size: 22px;
+    }
+
+    .header__button-links {
+        flex-wrap: wrap;
+    }
+
+    .header__filters {
+        grid-template-columns: 1fr;
+    }
+
+    .brands-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .brands-grid img {
+        min-height: 82px;
+        padding: 8px 10px;
+    }
+
+    .offers-grid,
+    .advantages-grid,
+    .news-grid,
+    .partners-grid,
+    .request-form,
+    .credit-terms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading,
+    .credit-terms-header,
+    .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .calculator-card {
+        padding: 18px 14px;
+    }
+
+    .form-row--three {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.main-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: #202020;
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.2;
+}
+
+.view-all-btn {
+    border: none;
+    background: transparent;
+    color: #e53935;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-all-btn:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.brands-section {
+    padding: 55px 0 45px;
+    background: #fff;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+    align-items: stretch;
+}
+
+.brands-grid img {
+    display: block;
+    width: 100%;
+    min-height: 72px;
+    height: 100%;
+    aspect-ratio: 1.55 / 1;
+    object-fit: contain;
+    padding: 10px 12px;
+    border: 1px solid #dfe3e8;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.brands-grid img:hover {
+    border-color: #e53935;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+.brand-item {
+    min-height: 72px;
+    border: 1px solid #dddddd;
+    background: #fff;
+    color: #303030;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.brand-item:hover {
+    border-color: #e53935;
+    color: #e53935;
+    transform: translateY(-2px);
+}
+
+.show-more-brands {
+    display: block;
+    width: 180px;
+    height: 44px;
+    margin: 22px auto 0;
+    border: none;
+    border-radius: 3px;
+    background: #e53935;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.show-more-brands:hover {
+    background: #c62828;
+    transform: translateY(-2px);
+}
+
+
+
+.quick-request {
+    position: relative;
+    min-height: 190px;
+    overflow: hidden;
+    background: #151515;
+}
+
+.quick-request::before {
+    position: absolute;
+    inset: 0;
+    background-image: url("./IMG/street-landmark-center-urban-modern 1.png");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.35;
+    content: "";
+}
+
+.quick-request-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.5)
+    );
+}
+
+.quick-request-content {
+    position: relative;
+    z-index: 2;
+    padding: 32px 0;
+}
+
+.quick-request-text h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.quick-request-text p {
+    margin-top: 7px;
+    color: #cfcfcf;
+    font-size: 13px;
+}
+
+.request-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 150px;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.request-form select,
+.request-form input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 4px;
+    background: white;
+    color: #222;
+    font-size: 13px;
+}
+
+.request-form button {
+    border: none;
+    border-radius: 4px;
+    background: #e53935;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.request-form button:hover {
+    background: #c62828;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    color: #bdbdbd;
+    font-size: 9px;
+    }
+
+
+    .offers-section {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.offers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.offers-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.view-all {
+  font-size: 14px;
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Сетка из 3 колонок */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Стили карточки */
+.card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 4px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+/* Характеристики */
+.card-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  font-size: 12px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.spec-item .label {
+  color: #888888;
+}
+
+/* Цены */
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.old-price {
+  font-size: 12px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.new-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d32f2f;
+}
+
+.credit-price {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+/* Кнопка */
+.btn-more {
+  width: 100%;
+  padding: 12px;
+  background-color: #e53935;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+}
+
+.btn-more:hover {
+  background-color: #c62828;
+}
+
+/* Адаптивность под мобильные устройства */
+@media (max-width: 992px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.main-container {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 24px;
+}
+
+/* -------------------------------------------------------------
+   1. СТИЛИ: Преимущества обращения к нам
+------------------------------------------------------------- */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.advantage-card {
+  background-color: #ffffff;
+  border: 1px solid #e2d2f1; /* фиолетовый контур как на макете */
+  border-radius: 4px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.advantage-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.advantage-text {
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* -------------------------------------------------------------
+   2. СТИЛИ: Баннеры и Акции
+------------------------------------------------------------- */
+.promo-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+.promo-banner {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.promo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.promo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.top-banner .banner-overlay {
+  top: 0;
+  bottom: auto;
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------
+   3. СТИЛИ: Лучшие предложения на покупку
+------------------------------------------------------------- */
+.best-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.offer-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.offer-tag {
+  background-color: #e53935; /* Красная плашка снизу */
+  color: #ffffff;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------
+   Адаптивность (Responsive)
+------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .advantages-grid,
+  .best-offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .advantages-grid,
+  .best-offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   СЕКЦИЯ: ЛУЧШИЕ ПРЕДЛОЖЕНИЯ
+   ========================================================= */
+.car-offers-section {
+    padding: 48px 0 56px;
+    background: linear-gradient(180deg, #f8f8f8 0%, #f2f2f2 100%);
+}
+
+.section-title {
+    margin-bottom: 24px;
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.offers-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.offer-card {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   СЕКЦИЯ: КРЕДИТНЫЙ КАЛЬКУЛЯТОР
+   ========================================================= */
+.calculator-section {
+    padding: 30px 0 60px;
+    background-color: #f5f5f5;
+}
+
+.calculator-card {
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-title {
+    margin-bottom: 24px;
+    color: #111;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.calculator-body {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+}
+
+/* Левая часть */
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row--three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.calc-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+}
+
+.calc-input:focus {
+    border-color: #e53935;
+}
+
+/* Выбор цвета */
+.color-picker-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.color-label {
+    color: #666;
+    font-size: 13px;
+}
+
+.color-options {
+    display: flex;
+    gap: 8px;
+}
+
+.color-circle {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+}
+
+.color-circle.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #e53935;
+}
+
+.color-circle--white { background-color: #ffffff; }
+.color-circle--black { background-color: #000000; }
+.color-circle--grey  { background-color: #888888; }
+.color-circle--red   { background-color: #e53935; }
+.color-circle--green { background-color: #2e7d32; }
+
+/* Итоговые цены */
+.price-summary {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.current-price {
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.price-summary .old-price {
+    color: #999;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+/* Чекбокс */
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Инпуты диапазона (Range) */
+.range-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.range-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.range-title {
+    color: #555;
+    font-size: 13px;
+}
+
+.range-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.range-box {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.range-box input {
+    width: 50px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+}
+
+.range-box--wide {
+    flex-grow: 1;
+}
+
+.range-box--wide input {
+    width: 100%;
+}
+
+.range-box .unit {
+    color: #777;
+    font-size: 12px;
+}
+
+.range-slider {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #e0e0e0;
+    accent-color: #e53935;
+    cursor: pointer;
+}
+
+/* Правая часть: Черный блок результатов */
+.calculator-result-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+.car-preview {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #262626;
+}
+
+.car-preview__img {
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+}
+
+.car-preview__info {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.car-preview__info strong {
+    color: #fff;
+}
+
+.car-preview__price {
+    margin-top: 4px;
+    color: #fff;
+}
+
+.result-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.result-row strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.calc-submit-btn {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e53935;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.calc-submit-btn:hover {
+    background-color: #c62828;
+}
+
+.disclaimer-text {
+    margin-top: 10px;
+    color: #666;
+    font-size: 9px;
+    line-height: 1.3;
+}
+
+/* ================= АДАПТИВНОСТЬ ================= */
+@media (max-width: 992px) {
+    .offers-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calculator-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .offers-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row--three {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   ОБЩИЙ КОНТЕЙНЕР СЕКЦИИ
+   ========================================================= */
+.credit-info-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+/* =========================================================
+   БЛОК 1: УСЛОВИЯ И ТРЕБОВАНИЯ КРЕДИТА
+   ========================================================= */
+.credit-terms-block {
+    margin-bottom: 50px;
+}
+
+.credit-terms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.credit-terms-header h2 {
+    color: #1a1a1a;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.credit-terms-link {
+    color: #e53935;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.credit-terms-link:hover {
+    text-decoration: underline;
+    color: #c62828;
+}
+
+.credit-terms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.credit-terms-card {
+    padding: 32px 36px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.credit-terms-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.credit-terms-card h3 {
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.credit-list {
+    margin: 0;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.credit-list li {
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.credit-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   БЛОК 2: НАШИ ПАРТНЕРЫ
+   ========================================================= */
+.partners-block {
+    padding-top: 10px;
+}
+
+.partners-title {
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.partner-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-card:hover {
+    border-color: #e53935;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.partner-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================================
+   АДАПТИВНОСТЬ (RESPONSIVE)
+   ========================================================= */
+@media (max-width: 1024px) {
+    .partners-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .credit-terms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .credit-terms-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 520px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   СЕКЦИЯ: НОВОСТИ
+   ========================================================= */
+.news-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.news-title {
+    color: #1a1a1a;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.news-all-link {
+    color: #888888;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.news-all-link:hover {
+    color: #e53935;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.news-card__img {
+    height: 180px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.news-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-card__img img {
+    transform: scale(1.05);
+}
+
+.news-card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px 20px;
+}
+
+.news-card__date {
+    margin-bottom: 8px;
+    color: #999999;
+    font-size: 12px;
+}
+
+.news-card__title {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   БЛОК: ОСТАЛИСЬ ВОПРОСЫ?
+   ========================================================= */
+.questions-banner-section {
+    padding: 20px 0 50px;
+    background-color: #f8f9fa;
+}
+
+.questions-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #111111 0%, #222222 100%);
+    color: #ffffff;
+}
+
+.questions-banner__info h3 {
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.questions-banner__info p {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.questions-banner__form {
+    display: flex;
+    gap: 12px;
+}
+
+.q-input {
+    width: 190px;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 13px;
+    outline: none;
+}
+
+.q-input:focus {
+    border-color: #e53935;
+}
+
+.q-btn {
+    height: 44px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e53935;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.q-btn:hover {
+    background-color: #c62828;
+}
+
+/* =========================================================
+   БЛОК: КАРТА И КОНТАКТЫ
+   ========================================================= */
+.map-section {
+    position: relative;
+    width: 100%;
+    height: 420px;
+}
+
+.map-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.map-container {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; /* Чтобы можно было крутить карту мышкой вокруг карточки */
+}
+
+.map-contact-card {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 320px;
+    padding: 24px 28px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    pointer-events: auto;
+}
+
+.map-card__title {
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.map-card__item {
+    margin-bottom: 12px;
+}
+
+.map-card__label {
+    display: block;
+    color: #888888;
+    font-size: 11px;
+}
+
+.map-card__phone {
+    color: #e53935;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.map-card__email {
+    color: #1a1a1a;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.map-card__text {
+    margin: 2px 0 0;
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.map-card__btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    border: 1px solid #e53935;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #e53935;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.map-card__btn:hover {
+    background-color: #e53935;
+    color: #ffffff;
+}
+
+/* =========================================================
+   ФУТЕР (FOOTER)
+   ========================================================= */
+.main-footer {
+    padding: 50px 0 24px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    gap: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #222222;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo-red {
+    color: #e53935;
+}
+
+.footer-phone {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-email,
+.footer-address {
+    margin-bottom: 4px;
+    color: #888888;
+    font-size: 12px;
+}
+
+.footer-col__title {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    color: #888888;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-menu a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding-top: 24px;
+}
+
+.footer-copyright {
+    color: #555555;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* ================= АДАПТИВНОСТЬ ================= */
+@media (max-width: 1024px) {
+    .questions-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .questions-banner__form {
+        width: 100%;
+
+        .q-input {
+            flex: 1;
+        }
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .questions-banner__form {
+        flex-direction: column;
+
+        .q-input,
+        .q-btn {
+            width: 100%;
+        }
+    }
+
+    .map-contact-card {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}

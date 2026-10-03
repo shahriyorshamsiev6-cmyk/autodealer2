@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Авто Динамика</title>
+</head>
+<body>
+    <header>
+          <div class="header__menu">
+            <img src="./IMG/2023-03-22 15.27.50 копия.png" alt="logo">
+               <p>Новые автомобили</p>
+               <p>С пробегом</p>
+               <p>Такси в кредит</p>
+               <p>Автокредит</p>
+               <p>Услуги</p>
+               <p>О компании</p>
+               <p>Контакты</p>
+          </div>
+
+                    <div class="header__img">
+                        <div class="header__backgroundimg">
+                            <img src="./IMG/image 61.png" alt="Автомобиль Hyundai H6">
+                            <img src="./IMG/image 59.png" alt="Белый автомобиль">
+                            <div class=" header__text">
+                            <h2>Финальная распродажа!</h2> 
+                            <h4>Автомобили 2022 / 2023 года</h4>
+
+                        <div style=" background-color: black;">
+                         <h4>Скидка на трейд-ин до <span>30%</span></h4> 
+                        </div>  
+
+                        <div style=" background-color: black;">
+                            <h4>Автокредит <span>4.9%</span></h4>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="header__button" aria-labelledby="car-picker-title">
+                        <img src="./IMG/image 58.png" alt="">
+                        <div class="header__button-content">
+                            <h3 id="car-picker-title">Подобрать автомобиль</h3>
+                            <nav class="header__button-links" aria-label="Категории автомобилей">
+                                <a href="#" style="background-color: white; color: orange;">Новые</a>
+                                <a href="#">С пробегом</a>
+                                <a href="#">Авто для такси</a>
+                            </nav>
+
+                            <form class="header__filters" action="#" method="get">
+                                <label class="visually-hidden" for="car-make">Марка автомобиля</label>
+                                <select id="car-make" name="make" required>
+                                    <option value="" selected disabled>Марка</option>
+                                    <option value="hyundai">Hyundai</option>
+                                    <option value="kia">Kia</option>
+                                    <option value="toyota">Toyota</option>
+                                    <option value="volkswagen">Volkswagen</option>
+                                    <option value="lada">Lada</option>
+                                </select>
+
+                                <label class="visually-hidden" for="car-model">Модель автомобиля</label>
+                                <select id="car-model" name="model" required>
+                                    <option value="" selected disabled>Модель</option>
+                                    <option value="h6">H6</option>
+                                    <option value="tucson">Tucson</option>
+                                    <option value="sportage">Sportage</option>
+                                    <option value="rio">Rio</option>
+                                    <option value="camry">Camry</option>
+                                    <option value="corolla">Corolla</option>
+                                    <option value="polo">Polo</option>
+                                    <option value="tiguan">Tiguan</option>
+                                    <option value="vesta">Vesta</option>
+                                    <option value="granta">Granta</option>
+                                </select>
+
+                                <label class="visually-hidden" for="price-min">Цена от</label>
+                                <input id="price-min" name="price_min" type="number" min="0" placeholder="Цена от">
+
+                                <label class="visually-hidden" for="price-max">Цена до</label>
+                                <input id="price-max" name="price_max" type="number" min="0" placeholder="Цена до">
+
+                                <button type="submit">Подобрать</button>
+                            </form>
+                        </div>
+                    </section>
+    </header>
+
+    <main>
+    <section class="brands-section">
+
+        <div class="main-container">
+
+            <div class="section-heading">
+                <h2>Продажа автомобилей в Москве</h2>
+
+                <button class="view-all-btn">
+                    Посмотреть все
+                </button>
+            </div>
+
+            <div class="brands-grid" id="brandsGrid">
+
+                <img src="./Logo/Brand-1.png" alt="logo">
+                <img src="./Logo/Brand-10.png" alt="logo">
+                <img src="./Logo/Brand-11.png" alt="logo">
+                <img src="./Logo/Brand-12.png" alt="logo">
+                <img src="./Logo/Brand-13.png" alt="logo">
+                <img src="./Logo/Brand-14.png" alt="logo">
+                <img src="./Logo/Brand-15.png" alt="logo">
+                <img src="./Logo/Brand-16.png" alt="logo">
+
+                <img src="./Logo/Brand-2.png" alt="logo">
+                <img src="./Logo/Brand-3.png" alt="logo">
+                <img src="./Logo/Brand-4.png" alt="logo">
+                <img src="./Logo/Brand-5.png" alt="logo">
+                <img src="./Logo/Brand-6.png" alt="logo">
+                <img src="./Logo/Brand-7.png" alt="logo">
+                <img src="./Logo/Brand-8.png" alt="logo">
+                <img src="./Logo/Brand-9.png" alt="logo">
+
+                <img src="./Logo/Brand-17.png" alt="logo">
+                <img src="./Logo/Brand-18.png" alt="logo">
+                <img src="./Logo/Brand-19.png" alt="logo">
+                <img src="./Logo/Brand-20.png" alt="logo">
+                <img src="./Logo/Brand-21.png" alt="logo">
+                <img src="./Logo/Brand-22.png" alt="logo">
+                <img src="./Logo/Brand-23.png" alt="logo">
+                <img src="./Logo/Brand-15.png" alt="logo">
+
+            </div>
+
+            <button class="show-more-brands" id="showMoreBrands">
+                Показать ещё
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="quick-request">
+
+        <div class="quick-request-overlay"></div>
+
+        <div class="main-container quick-request-content">
+
+            <div class="quick-request-text">
+
+                <h2>Заявка в один клик</h2>
+
+                <p>
+                    Оставьте заявку и мы подберём для Вас
+                    лучшее предложение.
+                </p>
+
+            </div>
+
+            <form class="request-form" id="requestForm">
+
+                <select id="requestBrand">
+                    <option value="">Марка</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="KIA">KIA</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                </select>
+
+                <select id="requestModel">
+                    <option value="">Модель</option>
+                    <option value="Elantra">Elantra</option>
+                    <option value="Sportage">Sportage</option>
+                    <option value="Camry">Camry</option>
+                    <option value="Tiguan">Tiguan</option>
+                </select>
+
+                <input
+                    id="requestName"
+                    type="text"
+                    placeholder="Ваше имя"
+                >
+
+                <input
+                    id="requestPhone"
+                    type="tel"
+                    placeholder="+7 999 999-99-99"
+                >
+
+                <button type="submit">
+                    Оставить заявку
+                </button>
+
+            </form>
+
+            <label class="agreement">
+                <input type="checkbox">
+                <span>
+                    Я соглашаюсь с условиями и даю своё согласие
+                    на обработку и использование моих персональных данных
+                </span>
+            </label>
+
+        </div>
+
+    </section>
+    <section class="offers-section">
+    <div class="offers-header">
+      <h2>Специальные предложения</h2>
+      <a href="#" class="view-all">Посмотреть все</a>
+    </div>
+
+    <div class="offers-grid">
+      <div class="card">
+        <div class="card-image">
+          <img src="./elantra/imgelantra.png" alt="HYUNDAI Elantra">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">HYUNDAI Elantra</h3>
+          <p class="card-subtitle">Comfort</p>
+          
+          <div class="card-specs">
+            <div class="spec-item">
+              <span class="label">Год выпуска:</span> 2023
+            </div>
+            <div class="spec-item">
+              <span class="label">Тип двигателя:</span> Бензин
+            </div>
+            <div class="spec-item">
+              <span class="label">КПП:</span> Автомат
+            </div>
+            <div class="spec-item">
+              <span class="label">Привод:</span> Передний
+            </div>
+          </div>
+
+          <div class="card-price">
+            <span class="old-price">от 1 100 000 руб.</span>
+            <span class="new-price">от 400 000 руб.</span>
+          </div>
+
+          <p class="credit-price">В кредит: от 1200 руб./день</p>
+
+          <button class="btn-more">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="./elantra/imgelantra.png" alt="HYUNDAI Elantra">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">HYUNDAI Elantra</h3>
+          <p class="card-subtitle">Comfort</p>
+          
+          <div class="card-specs">
+            <div class="spec-item">
+              <span class="label">Год выпуска:</span> 2023
+            </div>
+            <div class="spec-item">
+              <span class="label">Тип двигателя:</span> Бензин
+            </div>
+            <div class="spec-item">
+              <span class="label">КПП:</span> Автомат
+            </div>
+            <div class="spec-item">
+              <span class="label">Привод:</span> Передний
+            </div>
+          </div>
+
+          <div class="card-price">
+            <span class="old-price">от 1 100 000 руб.</span>
+            <span class="new-price">от 400 000 руб.</span>
+          </div>
+
+          <p class="credit-price">В кредит: от 1200 руб./день</p>
+
+          <button class="btn-more">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="./elantra/imgelantra.png" alt="HYUNDAI Elantra">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">HYUNDAI Elantra</h3>
+          <p class="card-subtitle">Comfort</p>
+          
+          <div class="card-specs">
+            <div class="spec-item">
+              <span class="label">Год выпуска:</span> 2023
+            </div>
+            <div class="spec-item">
+              <span class="label">Тип двигателя:</span> Бензин
+            </div>
+            <div class="spec-item">
+              <span class="label">КПП:</span> Автомат
+            </div>
+            <div class="spec-item">
+              <span class="label">Привод:</span> Передний
+            </div>
+          </div>
+
+          <div class="card-price">
+            <span class="old-price">от 1 100 000 руб.</span>
+            <span class="new-price">от 400 000 руб.</span>
+          </div>
+
+          <p class="credit-price">В кредит: от 1200 руб./день</p>
+
+          <button class="btn-more">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="./elantra/imgelantra.png" alt="HYUNDAI Elantra">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">HYUNDAI Elantra</h3>
+          <p class="card-subtitle">Comfort</p>
+          
+          <div class="card-specs">
+            <div class="spec-item">
+              <span class="label">Год выпуска:</span> 2023
+            </div>
+            <div class="spec-item">
+              <span class="label">Тип двигателя:</span> Бензин
+            </div>
+            <div class="spec-item">
+              <span class="label">КПП:</span> Автомат
+            </div>
+            <div class="spec-item">
+              <span class="label">Привод:</span> Передний
+            </div>
+          </div>
+
+          <div class="card-price">
+            <span class="old-price">от 1 100 000 руб.</span>
+            <span class="new-price">от 400 000 руб.</span>
+          </div>
+
+          <p class="credit-price">В кредит: от 1200 руб./день</p>
+
+          <button class="btn-more">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="./elantra/imgelantra.png" alt="HYUNDAI Elantra">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">HYUNDAI Elantra</h3>
+          <p class="card-subtitle">Comfort</p>
+          
+          <div class="card-specs">
+            <div class="spec-item">
+              <span class="label">Год выпуска:</span> 2023
+            </div>
+            <div class="spec-item">
+              <span class="label">Тип двигателя:</span> Бензин
+            </div>
+            <div class="spec-item">
+              <span class="label">КПП:</span> Автомат
+            </div>
+            <div class="spec-item">
+              <span class="label">Привод:</span> Передний
+            </div>
+          </div>
+
+          <div class="card-price">
+            <span class="old-price">от 1 100 000 руб.</span>
+            <span class="new-price">от 400 000 руб.</span>
+          </div>
+
+          <p class="credit-price">В кредит: от 1200 руб./день</p>
+
+          <button class="btn-more">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="./elantra/imgelantra.png" alt="HYUNDAI Elantra">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">HYUNDAI Elantra</h3>
+          <p class="card-subtitle">Comfort</p>
+          
+          <div class="card-specs">
+            <div class="spec-item">
+              <span class="label">Год выпуска:</span> 2023
+            </div>
+            <div class="spec-item">
+              <span class="label">Тип двигателя:</span> Бензин
+            </div>
+            <div class="spec-item">
+              <span class="label">КПП:</span> Автомат
+            </div>
+            <div class="spec-item">
+              <span class="label">Привод:</span> Передний
+            </div>
+          </div>
+
+          <div class="card-price">
+            <span class="old-price">от 1 100 000 руб.</span>
+            <span class="new-price">от 400 000 руб.</span>
+          </div>
+
+          <p class="credit-price">В кредит: от 1200 руб./день</p>
+
+          <button class="btn-more">Подробнее</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="main-container">
+
+    <!-- 1. СЕКЦИЯ: Преимущества обращения к нам -->
+    <section class="advantages-section">
+      <h2 class="section-title">Преимущества обращения к нам</h2>
+      
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <img src="./Elantra/Frame 159.png" alt="Иконка">
+          </div>
+          <p class="advantage-text">Большой выбор автомобилей в наличии и под заказ</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <img src="./Elantra/Group 31.png" alt="Иконка">
+          </div>
+          <p class="advantage-text">Более 30 банков-партнеров с выгодными условиями</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <img src="./Elantra/Group.png" alt="Иконка">
+          </div>
+          <p class="advantage-text">Большой выбор автомобилей в наличии и под заказ</p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <img src="./Elantra/Group.png" alt="Иконка">
+          </div>
+          <p class="advantage-text">Большой выбор автомобилей в наличии и под заказ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. СЕКЦИЯ: Баннеры и Акции -->
+    <section class="promo-section">
+      <!-- Большой баннер слева -->
+      <div class="promo-banner main-banner">
+        <img src="./images/Frame 63.png" alt="Geely Coolray">
+        <div class="banner-overlay">
+          
+        </div>
+      </div>
+
+      <!-- Правая колонка с двумя баннерами -->
+      <div class="promo-column">
+        <div class="promo-banner mini-banner top-banner">
+          <img src="./images/Frame 64.png" alt="Акция">
+          <div class="banner-overlay">
+          </div>
+        </div>
+
+        <div class="promo-banner mini-banner bottom-banner">
+          <img src="./images/image 48.png" alt="КАСКО">
+          <div class="banner-overlay">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= СЕКЦИЯ: ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ================= -->
+<section class="car-offers-section">
+    <div class="main-container">
+        <h2 class="section-title">Лучшие предложения на покупку автомобиля</h2>
+        
+        <div class="offers-cards-grid">
+            <div class="offer-card">
+                <img src="./Elantra/Frame-160.png" alt="Семейный автомобиль">
+
+            </div>
+            
+            <div class="offer-card">
+                <img src="./Elantra/Frame-161.png" alt="Первый автомобиль">
+
+            </div>
+            
+            <div class="offer-card">
+                <img src="./Elantra/Frame-162.png" alt="Выгодный Trade-In">
+            </div>
+            
+            <div class="offer-card">
+                <img src="./Elantra/Frame-163.png" alt="Ставка по кредитам от 4.8%">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= СЕКЦИЯ: КРЕДИТНЫЙ КАЛЬКУЛЯТОР ================= -->
+<section class="calculator-section">
+    <div class="main-container">
+        <div class="calculator-card">
+            <h2 class="calculator-title">Кредитный калькулятор</h2>
+
+            <div class="calculator-body">
+                <!-- ЛЕВАЯ ЧАСТЬ: ФОРМА И ПОЗУНКИ -->
+                <div class="calculator-form">
+                    <div class="form-row form-row--three">
+                        <select class="calc-input">
+                            <option value="">Марка</option>
+                        </select>
+                        <select class="calc-input">
+                            <option value="">Модель</option>
+                        </select>
+                        <select class="calc-input">
+                            <option value="">Комплектация</option>
+                        </select>
+                    </div>
+
+                    <!-- Выбор цвета -->
+                    <div class="color-picker-group">
+                        <span class="color-label">Цвет:</span>
+                        <div class="color-options">
+                            <button type="button" class="color-circle color-circle--white active"></button>
+                            <button type="button" class="color-circle color-circle--black"></button>
+                            <button type="button" class="color-circle color-circle--grey"></button>
+                            <button type="button" class="color-circle color-circle--red"></button>
+                            <button type="button" class="color-circle color-circle--green"></button>
+                        </div>
+                    </div>
+
+                    <!-- Итоговая цена -->
+                    <div class="price-summary">
+                        <span class="current-price">11 980 000 руб.</span>
+                        <span class="old-price">12 280 000 руб.</span>
+                    </div>
+
+                    <!-- Чекбокс скидки -->
+                    <label class="checkbox-option">
+                        <input type="checkbox" checked>
+                        <span>За счет стоимости автомобиля по программе Трейд-ин до 150 000 руб.</span>
+                    </label>
+
+                    <!-- Ползунок: Первоначальный взнос -->
+                    <div class="range-group">
+                        <div class="range-header">
+                            <span class="range-title">Первоначальный взнос:</span>
+                        </div>
+                        <div class="range-inputs">
+                            <div class="range-box">
+                                <input type="text" value="20" readonly>
+                                <span class="unit">%</span>
+                            </div>
+                            <div class="range-box range-box--wide">
+                                <input type="text" value="2 000 000" readonly>
+                                <span class="unit">руб.</span>
+                            </div>
+                        </div>
+                        <input type="range" class="range-slider" min="0" max="100" value="20">
+                    </div>
+
+                    <!-- Ползунок: Срок кредита -->
+                    <div class="range-group">
+                        <div class="range-header">
+                            <span class="range-title">Срок кредита</span>
+                        </div>
+                        <input type="range" class="range-slider" min="12" max="84" value="54">
+                    </div>
+                </div>
+
+                <!-- ПРАВАЯ ЧАСТЬ: ТЕМНАЯ КАРТОЧКА С РЕЗУЛЬТАТАМИ -->
+                <div class="calculator-result-card">
+                    <div class="car-preview">
+                        <img src="./Elantra/image 49.png" alt="Chery Tiggo 7" class="car-preview__img">
+                        <div class="car-preview__info">
+                            <p><strong>Марка:</strong> Chery</p>
+                            <p><strong>Модель:</strong> Tiggo 7</p>
+                            <p><strong>Комплектация:</strong> Sport 1.5 MT PRO</p>
+                            <p><strong>Цвет:</strong> Красный</p>
+                            <p class="car-preview__price"><strong>Стоимость:</strong> 11 000 000 руб.*</p>
+                        </div>
+                    </div>
+
+                    <div class="result-details">
+                        <div class="result-row">
+                            <span>Кредитная программа:</span>
+                            <strong>Chery Finance*</strong>
+                        </div>
+                        <div class="result-row">
+                            <span>Первоначальный взнос:</span>
+                            <strong>2 000 000 руб.</strong>
+                        </div>
+                        <div class="result-row">
+                            <span>Срок кредитования:</span>
+                            <strong>54 месяца</strong>
+                        </div>
+                        <div class="result-row">
+                            <span>Ежемесячный платеж:</span>
+                            <strong>120 000 руб.</strong>
+                        </div>
+                        <div class="result-row">
+                            <span>Сумма платежа в день:</span>
+                            <strong>2 000 руб.</strong>
+                        </div>
+                        <div class="result-row">
+                            <span>Ставка:</span>
+                            <strong>4.6%*</strong>
+                        </div>
+                    </div>
+
+                    <button class="calc-submit-btn">Отправить заявку</button>
+                    <p class="disclaimer-text">* Предложение носит информационный характер и не является публичной офертой.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= СЕКЦИЯ: УСЛОВИЯ И ПАРТНЕРЫ ================= -->
+<section class="credit-info-section">
+    <div class="main-container">
+        
+        <!-- --- БЛОК 1: УСЛОВИЯ ПОЛУЧЕНИЯ КРЕДИТА --- -->
+        <div class="credit-terms-block">
+            <div class="credit-terms-header">
+                <h2>Условия получения кредита</h2>
+                <a href="#" class="credit-terms-link">Подробнее об автокредите</a>
+            </div>
+
+            <div class="credit-terms-grid">
+                <!-- Карточка 1: Условия -->
+                <div class="credit-terms-card">
+                    <div class="card-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>Условия получения кредита</h3>
+                    <ul class="credit-list">
+                        <li>Сумма до 7 000 000 руб.</li>
+                        <li>Срок кредита от 6 месяцев до 7 лет</li>
+                        <li>Возможность сдать свой автомобиль в Trade-in</li>
+                        <li>Досрочное погашение без штрафов и комиссий</li>
+                        <li>Без обязательного КАСКО и страхования</li>
+                    </ul>
+                </div>
+
+                <!-- Карточка 2: Требования -->
+                <div class="credit-terms-card">
+                    <div class="card-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Требования к получателю</h3>
+                    <ul class="credit-list">
+                        <li>Гражданство РФ</li>
+                        <li>Возраст от 21 года до 65 лет</li>
+                        <li>Паспорт и водительское удостоверение гражданина РФ</li>
+                        <li>Трудовой стаж на последнем месте работы не менее 6 месяцев</li>
+                        <li>Наличие постоянной регистрации на территории РФ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- --- БЛОК 2: НАШИ ПАРТНЕРЫ --- -->
+        <div class="partners-block">
+            <h2 class="partners-title">Наши партнеры</h2>
+            
+            <div class="partners-grid">
+                <!-- Карточка партнера 1 -->
+                <div class="partner-card">
+                    <img src="./partners/sber.png" alt="Сбербанк">
+                </div>
+                <!-- Карточка партнера 2 -->
+                <div class="partner-card">
+                    <img src="./partners/alfa.png" alt="Альфа-Банк">
+                </div>
+                <!-- Карточка партнера 3 -->
+                <div class="partner-card">
+                    <img src="./partners/russki.png" alt="Русский Стандарт">
+                </div>
+                <!-- Карточка партнера 4 -->
+                <div class="partner-card">
+                    <img src="./partners/ingo.png" alt="Ингосстрах">
+                </div>
+                <!-- Карточка партнера 5 -->
+                <div class="partner-card">
+                    <img src="./partners/peco.png" alt="РЕСО">
+                </div>
+                                <!-- Карточка партнера 2 -->
+                <div class="partner-card">
+                    <img src="./partners/alfa.png" alt="Альфа-Банк">
+                </div>
+                <!-- Карточка партнера 6 -->
+                <div class="partner-card">
+                    <img src="./partners/rene.png" alt="Ренессанс">
+                </div>
+
+                <!-- Ряд 2 -->
+                <div class="partner-card">
+                    <img src="./partners/rene.png" alt="Ренессанс">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/Sber.png" alt="Сбербанк">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/peco.png" alt="РЕСО">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/russki.png" alt="Русский Стандарт">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/alfa.png" alt="Альфа-Банк">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/sber.png" alt="Сбербанк">
+                </div>
+
+                <!-- Ряд 3 -->
+                <div class="partner-card">
+                    <img src="./partners/sber.png" alt="Сбербанк">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/alfa.png" alt="Альфа-Банк">
+                </div>
+                                <!-- Карточка партнера 6 -->
+                <div class="partner-card">
+                    <img src="./partners/rene.png" alt="Ренессанс">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/russki.png" alt="Русский Стандарт">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/ingo.png" alt="Ингосстрах">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/peco.png" alt="РЕСО">
+                </div>
+                <div class="partner-card">
+                    <img src="./partners/rene.png" alt="Ренессанс">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= СЕКЦИЯ: НОВОСТИ ================= -->
+<section class="news-section">
+    <div class="main-container">
+        <div class="news-header">
+            <h2 class="news-title">Новости</h2>
+            <a href="#" class="news-all-link">Посмотреть все</a>
+        </div>
+
+        <div class="news-grid">
+            <!-- Новость 1 -->
+            <article class="news-card">
+                <div class="news-card__img">
+                    <img src="./News/Rectangle 239.png" alt="LADA внедряет собственную программу">
+                </div>
+                <div class="news-card__content">
+                    <span class="news-card__date">10.10.2023</span>
+                    <h3 class="news-card__title">LADA внедряет собственную программу утилизации</h3>
+                </div>
+            </article>
+
+            <!-- Новость 2 -->
+            <article class="news-card">
+                <div class="news-card__img">
+                    <img src="./News/Rectangle 240.png" alt="Дилер BMW отчитался за 2022">
+                </div>
+                <div class="news-card__content">
+                    <span class="news-card__date">08.10.2023</span>
+                    <h3 class="news-card__title">Дилер BMW отчитался за 2022 год: Поставки оптимизированы</h3>
+                </div>
+            </article>
+
+            <!-- Новость 3 -->
+            <article class="news-card">
+                <div class="news-card__img">
+                    <img src="./News/Rectangle 241.png" alt="LADA внедряет собственную">
+                </div>
+                <div class="news-card__content">
+                    <span class="news-card__date">05.10.2023</span>
+                    <h3 class="news-card__title">LADA внедряет собственную программу кредитования</h3>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ================= БЛОК: ОСТАЛИСЬ ВОПРОСЫ? ================= -->
+<section class="questions-banner-section">
+    <div class="main-container">
+        <div class="questions-banner">
+            <div class="questions-banner__info">
+                <h3>Остались вопросы?</h3>
+                <p>Мы свяжемся с Вами в течение 10 минут и ответим на всё</p>
+            </div>
+            <form class="questions-banner__form" onsubmit="event.preventDefault();">
+                <input type="text" placeholder="Ваше имя" required class="q-input">
+                <input type="tel" placeholder="+7 (___) ___-__-__" required class="q-input">
+                <button type="submit" class="q-btn">Получить консультацию</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ================= БЛОК: КАРТА И КОНТАКТЫ ================= -->
+<section class="map-section">
+    <!-- Фоновое изображение или Яндекс/Google карта -->
+    <div class="map-background">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.617635%2C55.755814&z=12" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
+
+    <div class="main-container map-container">
+        <div class="map-contact-card">
+            <h3 class="map-card__title">Контакты</h3>
+            
+            <div class="map-card__item">
+                <span class="map-card__label">Телефон:</span>
+                <a href="tel:+74953745408" class="map-card__phone">+7 (495) 374-54-08</a>
+            </div>
+
+            <div class="map-card__item">
+                <span class="map-card__label">E-mail:</span>
+                <a href="mailto:support@autodealer.com" class="map-card__email">support@autodealer.com</a>
+            </div>
+
+            <div class="map-card__item">
+                <span class="map-card__label">Адрес:</span>
+                <p class="map-card__text">г. Москва, ул. Крылатская, д. 2, корп. 4</p>
+            </div>
+
+            <div class="map-card__item">
+                <span class="map-card__label">Режим работы:</span>
+                <p class="map-card__text">Ежедневно с 9:00 до 21:00</p>
+            </div>
+
+            <button class="map-card__btn">Заказать звонок</button>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ФУТЕР (FOOTER) ================= -->
+
+    </main>
+<footer class="main-footer">
+    <div class="main-container">
+        <div class="footer-top">
+            <!-- Колонна 1: Логотип и телефон -->
+            <div class="footer-col footer-col--brand">
+                <a href="#" class="footer-logo">
+                    <span class="logo-red">AUTO</span>DEALER
+                </a>
+                <a href="tel:+74953745408" class="footer-phone">+7 (495) 374-54-08</a>
+                <p class="footer-email">support@autodealer.com</p>
+                <p class="footer-address">г. Москва, ул. Крылатская, д. 2, корп. 4</p>
+            </div>
+
+            <!-- Колонна 2: Автомобили -->
+            <div class="footer-col">
+                <h4 class="footer-col__title">Автомобили</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">Каталог авто</a></li>
+                    <li><a href="#">С пробегом</a></li>
+                    <li><a href="#">Новые авто</a></li>
+                    <li><a href="#">Спецпредложения</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонна 3: Клиентам -->
+            <div class="footer-col">
+                <h4 class="footer-col__title">Клиентам</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">Автокредит</a></li>
+                    <li><a href="#">Трейд-ин</a></li>
+                    <li><a href="#">Выкуп авто</a></li>
+                    <li><a href="#">Рассрочка</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонна 4: О компании -->
+            <div class="footer-col">
+                <h4 class="footer-col__title">О компании</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">О салоне</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонна 5: Услуги -->
+            <div class="footer-col">
+                <h4 class="footer-col__title">Услуги</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">Страхование</a></li>
+                    <li><a href="#">Регистрация ГИБДД</a></li>
+                    <li><a href="#">Установка доп. оборудования</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2023 Автосалон "AutoDealer". Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="./script.js" defer></script>
+</body>
+</html>
